@@ -1,6 +1,6 @@
 const express = require('express')
 const session = require('express-session')
-const FileStore = require('session-file-store')(session)
+const MongoStore = require('connect-mongo')(session)
 const nunjucks = require('nunjucks')
 const path = require('path')
 
@@ -21,8 +21,8 @@ class App {
         name: 'root',
         secret: 'MyAppSecret',
         resave: true,
-        store: new FileStore({
-          path: path.resolve(__dirname, '..', 'tmp', 'sessions')
+        store: new MongoStore({
+          url: 'mongodb://127.0.0.1:27017/gobarber-session-store'
         }),
         saveUninitialized: false
       })
