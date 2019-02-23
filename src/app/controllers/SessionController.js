@@ -11,12 +11,20 @@ class SessionController {
     const user = await User.findOne({ where: { email } })
 
     if (!user || !(await user.checkPassword(password))) {
+      req.flash('error', 'Invalid credentials')
       return res.redirect('/')
     }
 
     req.session.user = user
 
     return res.redirect('/app/dashboard')
+  }
+
+  async destroy (req, res) {
+    req.session.destroy(() => {
+      res.clearCookie('root')
+      res.redirect('/')
+    })
   }
 }
 
