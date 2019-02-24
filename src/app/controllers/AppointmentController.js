@@ -18,6 +18,18 @@ class AppointmentController {
       date
     })
 
+    req.flash('success', 'Appointment has been created')
+    return res.redirect('/app/dashboard')
+  }
+
+  async destroy (req, res) {
+    const { id } = req.params
+
+    await Appointment.destroy({
+      where: { id }
+    })
+
+    req.flash('success', 'Appointment has been removed')
     return res.redirect('/app/dashboard')
   }
 }

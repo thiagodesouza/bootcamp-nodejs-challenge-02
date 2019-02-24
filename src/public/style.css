@@ -184,12 +184,14 @@ body {
   color: #444;
 }
 
+ul.appointments,
 ul.providers {
   list-style: none;
   display: flex;
   flex-direction: column;
 }
 
+.appointment,
 .provider {
   padding: 20px;
   border: 1px solid #ddd;
@@ -200,24 +202,38 @@ ul.providers {
   justify-content: space-between;
 }
 
+.appointment div,
 .provider div {
   display: flex;
   align-items: center;
 }
 
+.appointment img,
 .provider img {
   width: 48px;
   height: 48px;
   border-radius: 50%;
 }
 
+.appointment strong,
 .provider strong {
   margin-left: 15px;
   color: #444;
 }
 
-.provider a {
-  background: #7159c1;
+.appointment strong span {
+  margin-top: 5px;
+  font-weight: 200;
+  display: block;
+}
+
+.appointment strong span.outdated {
+  text-decoration: line-through;
+}
+
+.appointment a,
+.provider a,
+.appointment i {
   padding: 5px 10px;
   font-weight: bold;
   text-decoration: none;
@@ -225,8 +241,18 @@ ul.providers {
   border-radius: 4px;
   color: #fff;
 }
+.appointment a {
+  background: #de6d6d;
+}
+.provider a {
+  background: #7159c1;
+}
+.appointment i.disabled {
+  background: #aaaaaa;
+}
 
 .alert {
+  text-align: center;
   width: 100%;
   padding: 8px 15px;
   border-radius: 4px;

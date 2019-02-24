@@ -24,7 +24,9 @@ class App {
         secret: 'MyAppSecret',
         resave: true,
         store: new MongoStore({
-          url: 'mongodb://127.0.0.1:27017/gobarber-session-store'
+          url:
+            process.env.MONGO_HOST ||
+            'mongodb://127.0.0.1:27017/gobarber-session-store'
         }),
         saveUninitialized: false
       })

@@ -3,19 +3,40 @@
 {% block body %}
   <div class="content">
     <strong>Hello, {{ user.name }}</strong>
-    <p>Select a professional to start scheduling<p>
 
-    <ul class="providers">
-      {% for provider in providers %}
-        <li class="provider">
-          <div>
-            <img src="/files/{{ provider.avatar }}" />
-            <strong>{{ provider.name }}</strong>
-          </div>
-          <a href="/app/appointments/new/{{ provider.id }}">+</a>
-        </li>
-      {% endfor %}
-    </ul>
+    {% if user.provider === false %}
+
+      <p>Select a professional to start scheduling<p>
+      <ul class="providers">
+        {% for provider in providers %}
+          <li class="provider">
+            <div>
+              <img src="/files/{{ provider.avatar }}" />
+              <strong>{{ provider.name }}</strong>
+            </div>
+            <a href="/app/appointments/new/{{ provider.id }}">+</a>
+          </li>
+        {% endfor %}
+      </ul>
+
+    {% else %}
+
+      <p>{% if appointments.length > 0 %}This is your{% else %}You don't have{% endif %} appointments for today<p>
+      <ul class="appointments">
+        {% for appointment in appointments %}
+          <li class="appointment">
+            <div>
+              <img src="/files/{{ appointment.client_avatar }}" />
+              <strong>{{ appointment.client_name }} <span>{{ appointment.time }}</span> </strong>
+            </div>
+            <a href="/app/appointments/destroy/{{ appointment.id }}">-</a>
+          </li>
+        {% endfor %}
+      </ul>
+
+    {% endif%}
+
+    {% include "_partials/flash.njk" %}
 
     <a href="/app/logout" class="logout">Logout</a>
 
