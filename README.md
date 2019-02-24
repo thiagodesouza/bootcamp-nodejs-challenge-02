@@ -8,7 +8,7 @@ This project was created along the second module of Nodejs (GoStack - Rocketseat
 
 ### Challenge:
 
-> Create a section for the services providers to follow up yourself schedules of the day. This section should include user information that scheduled the service. <br /> <small>By: [Rocketseat](https://rocketseat.com.br/) </small>
+> Create a section for the services providers to follow up the appointments of the day. This section should include user information that scheduled the service. <br /> <small>By: [Rocketseat](https://rocketseat.com.br/) </small>
 
 <br />
 
