@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thiagodesouza/gonode2-gobarber.git"
+    "url": "https://github.com/thiagodesouza/gobarber-app.git"
   },
   "scripts": {
     "start": "nodemon src/index.js -e js"
