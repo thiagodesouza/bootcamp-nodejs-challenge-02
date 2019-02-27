@@ -1,4 +1,4 @@
-### GoBarber - Nodejs Bootcamp Challenge: 02
+## GoBarber - GoNode Challenge #2
 
 This project was created along the second module of Nodejs (GoStack - Rocketseat).
 
@@ -8,7 +8,9 @@ This project was created along the second module of Nodejs (GoStack - Rocketseat
 
 ### Challenge:
 
-> Create a section for the services providers to follow up the appointments of the day. This section should include user information that scheduled the service. <br /> <small>By: [Rocketseat](https://rocketseat.com.br/) </small>
+> Crie uma seção para o prestador de serviços acompanhar os agendamentos do dia programados com ele. Essa seção deve incluir as informações do usuário que agendou e também o horário do agendamento.
+>
+> <small>By: [Rocketseat](https://rocketseat.com.br/) </small>
 
 <br />
 

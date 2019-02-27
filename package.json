@@ -1,6 +1,6 @@
 {
-  "name": "bootcamp-node-gobarber",
-  "version": "1.0.0",
+  "name": "gonode2-gobarber",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "author": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thiagodesouza/bootcamp-nodejs-challenge-02.git"
+    "url": "https://github.com/thiagodesouza/gonode2-gobarber.git"
   },
   "scripts": {
     "start": "nodemon src/index.js -e js"
